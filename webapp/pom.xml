@@ -10,10 +10,10 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>cnt-tacs</artifactId>
+  <artifactId>cnt-docker.war</artifactId>
   <packaging>war</packaging>
-  <name>cnt</name>
-  <description>cnt.</description>
+  <name>cnt-docker.war</name>
+  <description>cnt-docker.war.</description>
 
   <build>
     <finalName>${project.artifactId}</finalName>
