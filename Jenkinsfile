@@ -2,6 +2,10 @@ pipeline {
   agent any
   tools {
     maven 'M2_HOME'
+  environment {
+    registry = "moute91/docker-pipeline"
+    registryCredentials = "DockerID" 
+  }
   }
   stages {
     stage ('build') {
@@ -25,9 +29,11 @@ pipeline {
         sleep 4
       }
     }
-    stage ('deploy') {
+    stage ('docker') {
       steps{
-      echo "what is deploying"
+        script {
+        docker.build registry + ":$BUILD_NUMBER"
+        }
         sleep 4
       }
     }
