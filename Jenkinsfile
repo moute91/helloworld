@@ -7,6 +7,7 @@ pipeline {
     registryCredentials = "DockerID" 
   }
   }
+  }
   stages {
     stage ('build') {
       steps{
